@@ -1,0 +1,233 @@
+
+* {  
+    /* border: solid black 1px; <==== create a border around all elements */
+    padding: 0; 
+    margin: 0;
+}
+
+
+@font-face {
+    font-family: 'Naruto';
+    src: url('./fonts/header_title/NinjaNaruto-YOn4.ttf') format('truetype');
+}
+
+a:visited, a:link { 
+    text-decoration: none;
+    color: black;
+}
+
+a:hover { 
+    color: #FA9427;
+}
+
+.logo { 
+    mix-blend-mode: multiply;
+    height: auto;
+    width: auto;
+    max-height: 130px;
+    max-width: 130px;
+    fill: black;
+    margin-right: 10px;
+}
+
+ul { 
+    list-style-type: none;
+}
+
+.header { 
+    display: flex;
+    flex-direction: row;
+    background-color: #80CCD2;
+    justify-content: space-between;
+    padding: 30px 120px 30px 120px;
+}
+
+.h-left { 
+    display: flex;
+    align-items: center;
+    font-family: 'Naruto', sans-serif;
+    font-size: 32px;
+    color: #FF601A;
+}
+
+.h-right { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links { 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+}
+
+.hero { 
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 120px 40px 120px;
+    background-color: #80CCD2;
+}
+
+.hero-left { 
+    display: flex;
+    flex-direction: column;
+    /* align-items: space-between; */
+    width: 600px;
+    gap: 16px;
+}
+
+.hero-main { 
+    font-size: 48px; 
+    color: black;
+    font-family: 'Naruto', sans-serif;
+    font-weight: bolder;
+    margin-bottom: 12px;  
+}
+
+.hero-text { 
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    color: white;
+}
+
+.herobtn { 
+    padding: 10px 20px;
+    border-radius: 10px; 
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    width: 170px;
+    background-color: #c1e1ec;
+    align-items: end;
+}
+
+.herobtn:hover { 
+    background-color: #FA9427;
+}
+
+.k-image { 
+    border-radius: 25px; 
+    display: flex;
+    align-items: center;
+    height: 300px; 
+    transform: scaleX(0.9);
+    transform-origin: right;
+}
+
+.destination { 
+    display: flex;
+    flex-direction: column;
+    background-color: #FA9427;
+    padding: 30px 90px 60px 90px;
+}
+
+.d-title { 
+    display: flex;
+    justify-content: center;
+    font-family: 'Naruto', sans-serif;
+    font-size: 36px;
+    margin-bottom: 32px;
+    font-weight: bold;
+}
+
+.rectangle { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+    color: black;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+}
+
+.office, .rock, .ramen, .academy { 
+    border-radius: 25px;
+    height: 200px;
+    width: 200px;
+    border: solid white 3px;
+    /* margin-bottom: 2px; <==== use this is you want to add more space betweem img and text */
+}
+
+.square:hover { 
+    transform: scale(1.1);
+    transition-duration: 500ms;
+}
+
+.quote { 
+    background-color: #80CCD2;
+    display: flex;
+    flex-direction: column;
+    padding: 120px 200px 120px 200px;
+    gap: 20px;
+}
+
+.text { 
+    font-size: 36px;
+    font-weight: lighter;
+    font-family: 'Bebas Neue', sans-serif;
+    color: white; 
+    font-style: italic;
+}
+
+.author { 
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.actionbtn { 
+   background-color: #FA9427;
+   padding: 70px 120px;
+}
+
+.background { 
+    padding: 30px 120px;
+    background-color:  #80CCD2; 
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.a-left { 
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 23px;
+}
+
+.first { 
+    font-weight: bold;
+}
+
+.a-btn { 
+    margin-top: 12px;
+    padding: 10px 20px;
+    border-radius: 10px; 
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    width: 170px;
+    background-color: #c1e1ec; 
+}
+
+.a-btn:hover { 
+    background-color: #FA9427;
+}
+
+.footer { 
+    padding: 30px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: #80CCD2;
+}
