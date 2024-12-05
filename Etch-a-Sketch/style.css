@@ -1,0 +1,34 @@
+* {  
+    /*border: solid black 1px; <==== create a border around all elements */
+    margin: 0;
+    padding: 0;
+}
+
+#button { 
+    height: 50px; 
+    width: 75px;
+}
+
+#container { 
+    width: 850px;
+    height: 850px;
+    border: solid black 2px;
+    display: flex;
+    flex-wrap: wrap; /* Ensure items wrap to the next line */
+}
+body { 
+    border: solid blue 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.square { 
+    width: calc(100% / var(--num-per-row)); /* Dynamic sizing: 5 squares per row */
+    aspect-ratio: 1 / 1; /* Maintain square shape */
+    background-color: white;
+    border: 1px solid lightblue;
+    box-sizing: border-box; /* Include border in width/height */
+}
