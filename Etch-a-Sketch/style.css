@@ -4,9 +4,26 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: 'Plaza';
+    src: url('/fonts/Plaza\ Std\ Regular.otf') format('opentype');
+}
+
 #btn { 
-    height: 25px; 
-    width: 75px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 32px; 
+    width: 107px;
+    border: solid black 1px;
+    border-radius: 7px;
+    font-size: 24px;
+    font-family: 'Plaza';
+    background-color: yellow;
+}
+
+#btn:hover { 
+    background-color: rgba(255, 255, 0, 0.863);
+    font-size: 27px;
 }
 
 #container { 
@@ -15,24 +32,30 @@
     border: solid black 2px;
     display: flex;
     flex-wrap: wrap; /* Ensure items wrap to the next line */
+    margin-bottom: 5px;
 }
+
 body { 
-    border: solid blue 2px;
+    border: solid black 2px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
+    background-image: url("/imgs/1105315.jpg");
+    background-size: cover;
+    background-size: contain;
+    background-size: 100% 900px;
+}   
 
 .square { 
     width: calc(100% / var(--num-per-row)); /* Dynamic sizing: 5 squares per row */
     aspect-ratio: 1 / 1; /* Maintain square shape */
     background-color: white;
-    border: 1px solid lightblue;
+    border: 1px solid hsla(0, 0%, 0%, 0.842);
     box-sizing: border-box; /* Include border in width/height */
 }
 
-.square:hover { 
-    background-color: rgb(Math.floor(Math.random()*255), Math.random()*255, Math.random()*255);
+.hover-effect { 
+    background-color:rgb(5, 5, 5);
 }
+
