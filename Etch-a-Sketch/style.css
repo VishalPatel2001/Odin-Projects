@@ -4,8 +4,8 @@
     padding: 0;
 }
 
-#button { 
-    height: 50px; 
+#btn { 
+    height: 25px; 
     width: 75px;
 }
 
@@ -31,4 +31,8 @@ body {
     background-color: white;
     border: 1px solid lightblue;
     box-sizing: border-box; /* Include border in width/height */
+}
+
+.square:hover { 
+    background-color: rgb(Math.floor(Math.random()*255), Math.random()*255, Math.random()*255);
 }
