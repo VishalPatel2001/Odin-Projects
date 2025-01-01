@@ -1,0 +1,10 @@
+* { 
+    border: solid black 1px; /*<==== create a border around all elements */
+}
+body {
+    /* add wall-E logo bottom left */
+    background-image: url(./imgs/walle.jpg);
+    background-size: 100%;
+}
+
+
