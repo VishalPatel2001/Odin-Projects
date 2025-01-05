@@ -1,5 +1,7 @@
 * { 
-    border: solid black 1px; /*<==== create a border around all elements */
+    /* border: solid yellow 1px; <==== create a border around all elements */
+    padding: 0; 
+    margin: 0;
 }
 body {
     /* add wall-E logo bottom left */
@@ -7,4 +9,33 @@ body {
     background-size: 100%;
 }
 
+
+.calculator { 
+    height: 400px;
+    width: 300px;
+    position: absolute; 
+    border: 2px solid #A65D29; 
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+.display { 
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-end;
+    padding: 15px;
+    height: 50px; 
+    width: 268px; 
+    border: 1px solid #6E6E6E; 
+    background-color: #2C2C2C;
+    color: white;
+    overflow: hidden;
+    font-size: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+}
 
