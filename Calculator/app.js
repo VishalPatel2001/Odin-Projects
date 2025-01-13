@@ -1,4 +1,23 @@
-//num1, num2 = Int, operator = String;
+let num1 = ''; 
+let num2 = ''; 
+let operator = ''; 
+
+//num1, num2 = String, operator = String;
+//if num already in display, then that is num1
+const excludedValues = ['calculate', '+', '-', '*', '÷' ]
+//keep appending until excluded values, then save to num1
+function display(button) { 
+    const display = document.getElementById('display');
+    display.innerHTML += button.value; // Append the button's value to the display
+}
+
+function clearAll(button) { 
+    const display = document.getElementById('display');
+    display.innerHTML = button.value;
+}
+
+
+
 function operate(num1,num2,operator){
 
     //ensure that function inputs are Int Values
@@ -44,6 +63,3 @@ function divide(a,b) {
     let solution = a / b;
     return solution.toFixed(6);
 }
-
-
-

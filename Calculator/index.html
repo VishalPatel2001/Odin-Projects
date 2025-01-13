@@ -11,27 +11,31 @@
     <!--finalize calc layout-->
     <div class='calculator'>
         <!--display user selected buttons-->
-        <div class="display">194567</div> 
+        <div id="display">0</div> 
         <div class ='calc-buttons'>
             <!-- operators, enter button, del button, numericals, decimal button-->
-            <button class='number'>7</button> 
-            <button class='number'>8</button>
-            <button class='number'>9</button>
+            <button class='number' onclick='display(this)' value="7">7</button>
+            <button class='number' onclick='display(this)' value="8">8</button>
+            <button class='number' onclick='display(this)' value="9">9</button>
             <button class='operator'>÷</button>
-            <button class='number'>4</button>
-            <button class='number'>5</button>
-            <button class='number'>6</button>
+
+            <button class='number' onclick='display(this)' value="4">4</button>
+            <button class='number' onclick='display(this)' value="5">5</button>
+            <button class='number' onclick='display(this)' value="6">6</button>
             <button class='operator'>*</button>
-            <button class='number'>1</button>
-            <button class='number'>2</button>
-            <button class='number'>3</button>
+
+            <button class='number' onclick='display(this)' value="1">1</button>
+            <button class='number' onclick='display(this)' value="2">2</button>
+            <button class='number' onclick='display(this)' value="3">3</button>
             <button class='operator'>-</button>
-            <button class='delete'></button>
-            <button class='number'>0</button>
-            <button class='number' id="period">.</button>
+
+            <button class='delete' onclick="clearAll(this)" value="0"></button> <!--clear display func-->
+            <button class='number' onclick='display(this)' value="0">0</button>
+            <button class='number' onclick='display(this)' value="." id="decimal">.</button>
             <button class='operator'>+</button>
+            
             <button class="calculate">Calculate</button>
-        </div> <!--boxes with 0-9, operations, and clear all btn -->
+        </div>
     </div>
 
     <!--make image smaller bottom right-->
