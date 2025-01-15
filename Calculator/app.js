@@ -1,23 +1,57 @@
+/* 
+
+----NOTES---- 
+
+still need to set the values for num1, num2, and operator;
+
+keep appending until excluded values, then save to num1;
+
+if num already in display, then that is num1;
+
+need to truncate nums displayed based on max display length
+
+*/
+
 let num1 = ''; 
 let num2 = ''; 
 let operator = ''; 
+let isExpectingSecondNumber = false //track if expecting a second number after operator press
+let isDecimalUsed = false; 
 
 //num1, num2 = String, operator = String;
-//if num already in display, then that is num1
-const excludedValues = ['calculate', '+', '-', '*', '÷' ]
-//keep appending until excluded values, then save to num1
+//ensure isDecimalUsed reflects the contents on what is being displayed, plus when operator is selected
 function display(button) { 
     const display = document.getElementById('display');
-    display.innerHTML += button.value; // Append the button's value to the display
+
+    //decimal can only be pressed once per num value
+    if (display.innerHTML.includes('.')) {
+        isDecimalUsed = true;  
+    } 
+    if (isDecimalUsed === true && button.value === '.') { 
+        return;
+    } 
+    
+    //display '0.' if operator selects '.' before any other num value
+    if (button.value === '.' && display.innerHTML === '0') { 
+        display.innerHTML = '0.';
+        isDecimalUsed = true;
+    } else if (display.innerHTML === '0') { 
+
+        display.innerHTML = button.value;
+    } else { 
+        //begin regular calc processes
+        display.innerHTML += button.value; 
+    }    
 }
 
+//reset display to '0'
 function clearAll(button) { 
     const display = document.getElementById('display');
     display.innerHTML = button.value;
+    isDecimalUsed = false;
 }
 
-
-
+//handle division, multiplication, addition, subtraction
 function operate(num1,num2,operator){
 
     //ensure that function inputs are Int Values
