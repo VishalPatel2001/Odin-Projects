@@ -16,13 +16,15 @@ let num1 = '';
 let num2 = ''; 
 let operator = ''; 
 let isExpectingSecondNumber = false //track if expecting a second number after operator press
-let isDecimalUsed = false; 
+let isDecimalUsed = false; //track if decimal is in current display 
+let count = 0; 
+const operations = ['+','-','*','÷'];
 
 //num1, num2 = String, operator = String;
 //ensure isDecimalUsed reflects the contents on what is being displayed, plus when operator is selected
 function display(button) { 
     const display = document.getElementById('display');
-
+    
     //decimal can only be pressed once per num value
     if (display.innerHTML.includes('.')) {
         isDecimalUsed = true;  
@@ -36,19 +38,54 @@ function display(button) {
         display.innerHTML = '0.';
         isDecimalUsed = true;
     } else if (display.innerHTML === '0') { 
-
+        //update display to selected num value
         display.innerHTML = button.value;
     } else { 
-        //begin regular calc processes
+        //continue num chaining
         display.innerHTML += button.value; 
     }    
+
+    //capture num2 value; capture operator selcted 
+    if (button.value.includes(operations)) { 
+        count +=1;
+        operator = button.value;
+        num1 += display.innerHTML;
+        isExpectingSecondNumber = true;
+        display.innerHTML = '0'; 
+        isDecimalUsed = false;
+    } 
+
+    //might not work, need to update this. 
+    if (count > 1) { 
+        return; 
+    }
+
+    //prevent multiple operation selections (using a count);
+    if (isExpectingSecondNumber === true) {
+        num2 += display.innerHTML;
+    } 
+    
+    //cannon select equal before second number 
+    if (button.value ==='equal' && isExpectingSecondNumber == false) { 
+        //intentionally left blank;
+    }
+
+    //operate with captured num1, num2, operator;
+    if (button.value === 'equal') {
+        operate(num1, num2, operator);
+    }
 }
 
-//reset display to '0'
+
+//reset entire state to default
 function clearAll(button) { 
     const display = document.getElementById('display');
     display.innerHTML = button.value;
-    isDecimalUsed = false;
+    num1 = ''; 
+    num2 = ''; 
+    operator = ''; 
+    isDecimalUsed = false; //might need to change this
+    isExpectingSecondNumber = false;
 }
 
 //handle division, multiplication, addition, subtraction
