@@ -8,38 +8,36 @@
 </head>
 <body>
 
-    <!--finalize calc layout-->
-    <div class='calculator'>
-        <!--display user selected buttons-->
+    <div class="calculator">
+        <!-- Display User Inputs -->
         <div id="display">0</div> 
-        <div class ='calc-buttons'>
-            <!-- operators, enter button, del button, numericals, decimal button-->
-            <button class='number' onclick='display(this)' value="7">7</button>
-            <button class='number' onclick='display(this)' value="8">8</button>
-            <button class='number' onclick='display(this)' value="9">9</button>
-            <button class='operator'>÷</button>
+        <div class="calc-buttons">
+            <!-- Numbers and Operators -->
+            <button class="number" onclick="display(this)" value="7">7</button>
+            <button class="number" onclick="display(this)" value="8">8</button>
+            <button class="number" onclick="display(this)" value="9">9</button>
+            <button class="operator" onclick="display(this)" value="÷">÷</button>
 
-            <button class='number' onclick='display(this)' value="4">4</button>
-            <button class='number' onclick='display(this)' value="5">5</button>
-            <button class='number' onclick='display(this)' value="6">6</button>
-            <button class='operator'>*</button>
+            <button class="number" onclick="display(this)" value="4">4</button>
+            <button class="number" onclick="display(this)" value="5">5</button>
+            <button class="number" onclick="display(this)" value="6">6</button>
+            <button class="operator" onclick="display(this)" value="*">*</button>
 
-            <button class='number' onclick='display(this)' value="1">1</button>
-            <button class='number' onclick='display(this)' value="2">2</button>
-            <button class='number' onclick='display(this)' value="3">3</button>
-            <button class='operator'>-</button>
+            <button class="number" onclick="display(this)" value="1">1</button>
+            <button class="number" onclick="display(this)" value="2">2</button>
+            <button class="number" onclick="display(this)" value="3">3</button>
+            <button class="operator" onclick="display(this)" value="-">-</button>
 
-            <button class='delete' onclick="clearAll(this)" value="0"></button> <!--clear display func-->
-            <button class='number' onclick='display(this)' value="0">0</button>
-            <button class='number' onclick='display(this)' value="." id="decimal">.</button>
-            <button class='operator'>+</button>
+            <button class="delete" onclick="clearAll()" value="C"></button> <!-- Clear display -->
+            <button class="number" onclick="display(this)" value="0">0</button>
+            <button class="number" onclick="display(this)" value="." id="decimal">.</button>
+            <button class="operator" onclick="display(this)" value="+">+</button>
             
-            <button class="calculate" value="'equal">Calculate</button>
+            <!-- Calculate/Equal Button -->
+            <button class="calculate" onclick="display(this)" value="equal">Calculate</button>
         </div>
     </div>
 
-    <!--make image smaller bottom right-->
-    <!-- <img src='imgs/logo.png' alt="wall-E logo" id="logo"> -->
     <script src="app.js"></script>
 </body>
 </html>
