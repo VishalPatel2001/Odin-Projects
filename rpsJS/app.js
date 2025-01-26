@@ -51,11 +51,11 @@ function playGame(rounds) {
     }
 
     if (humanScore > computerScore) {
-        console.log('Human Wins the Game!!');
+        console.log('Human Wins the Game!');
     } else if (computerScore > humanScore) {
-        console.log('Computer Wins the Game!!');
+        console.log('Computer Wins the Game!');
     } else {
-        console.log('The Game is a Draw!!');
+        console.log('The Game is a Draw!');
     }
 }
 
