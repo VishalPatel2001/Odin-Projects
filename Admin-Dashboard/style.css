@@ -1,5 +1,5 @@
 * { 
-    border: 2px solid black; 
+    border: 2px solid green; 
 }
 
 :root { 
@@ -24,7 +24,14 @@ body {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto 1fr;
     grid-area: 1 / 2 / 2 / -1;
+    padding: 0.5rem 2rem;
 }
+
+.search img { 
+    height: 2rem;
+    width: 2rem;
+}
+
 
 .sidebar { 
     background-color: lightgreen;
@@ -32,7 +39,7 @@ body {
     grid-area: 1 / 1 / -1 / 2;
     grid-template-rows: auto auto 1fr;
     padding: 1rem; 
-    color: white;
+    color: black;
 }
 
 .sidebar .logo { 
@@ -41,10 +48,17 @@ body {
     gap: 0.5rem;  
 }
 
+.sidebar .logo img { 
+    height: 3rem;
+    /* background-color:#5d97e7; */
+    /* border-radius: 50%; */
+}
+
 .sidebar .logo h3 {
     margin: 0; 
     font-size: 2rem;
     cursor: pointer;
+    text-decoration: underline;
 }
 
 .sidebar ul { 
@@ -57,9 +71,23 @@ body {
     display: flex;
     gap: 1rem;
     align-items: center;
+    font-weight: bolder;
 }
 
+.sidebar ul li img {
+    height: 2rem;
+    cursor: pointer;
+}
 
+.sidebar ul li p{ 
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.sidebar ul li p:hover{ 
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 .main { 
     background-color: lightslategrey;
