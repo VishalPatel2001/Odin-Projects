@@ -33,10 +33,10 @@ function playRound(humanSelection, computerSelection) {
         (humanSelection === 'paper' && computerSelection === 'rock') ||
         (humanSelection === 'scissors' && computerSelection === 'paper')
     ) {
-        console.log("Human wins this round!");
+        console.log("Human wins this round!!");
         humanScore += 1;
     } else {
-        console.log("Computer wins this round!");
+        console.log("Computer wins this round!!");
         computerScore += 1;
     }
 }
