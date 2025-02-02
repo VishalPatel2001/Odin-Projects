@@ -1,0 +1,31 @@
+* { 
+    border: 1px solid black; 
+}
+
+body, html { 
+    height: 100%; 
+    margin: 0; 
+    padding: 0;
+}
+
+body { 
+    display: grid; 
+    grid-template-columns: 1fr 4fr; 
+    grid-template-rows: 1fr 4fr; /*change r1 to auto*/
+}
+
+.header { 
+    background-color: lightblue;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.sidebar { 
+    background-color: lightgreen;
+    grid-row: 1 / 4;
+    grid-column: 1 / 2;
+}
+
+.main { 
+    background-color: lightslategrey;
+}
