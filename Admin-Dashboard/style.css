@@ -272,7 +272,7 @@ body {
     gap: 1rem;
 }
 
-.announcements { 
+.announcements, .trending { 
     display: flex;
     flex-direction: column;
     flex: 1; 
