@@ -4,73 +4,212 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Admin_Dashboard</title>
+    <link rel="icon" href="/imgs/sidebar/logo.svg">
+    <title>Admin Dashboard</title>
 </head>
 <body>
     <div class="header">
         <div class="search">
-            <img src="./imgs/header/search.svg" alt="">
-            <input type="text">
+            <label for="search-field">
+                <img src="./imgs/header/search.svg" alt="magnify icon" class="icon">
+            </label>
+            <input class='searchbox' id='search-field' type="text" placeholder="search...">
         </div>
         <div class="profile">
-
+            <img class='bell-icon icon'src="./imgs/header/notifications.svg" alt="bell icon" >
+            <img class='aang-top' src="./imgs/header/aang-profile.png" alt="aang profile picture">
+            <h3 class="username">Max Power</h3>
         </div>
         <div class="welcome">
-
+            <img src="./imgs/header/aang-profile.png" alt="aang profile picture" class="welcome-profile">
+            <p class="hi-para"> Hi there, </p>
+            <p class="user-para"> Max Power (@maxpower)</p>
         </div>
-        <div class="btn">
-
+        <div class="btn-container">
+            <button class="button">New</button>
+            <button class="button">Upload</button>
+            <button class="button">Share</button>
         </div>
     </div>
-
     <div class="sidebar">
         <div class="logo">
-            <img src="./imgs/sidebar/logo.svg" alt="leaf">
+            <img src="./imgs/sidebar/logo.svg" alt="leaf" class="icon">
             <h3>Dashboard</h3>
         </div> 
         <ul class="s-top">
             <li>
-                <img src="./imgs/sidebar/home.svg" alt="home icon">
+                <img src="./imgs/sidebar/home.svg" alt="home icon" class="icon">
                 <p>Home</p>
             </li>
             <li>
-                <img src="./imgs/sidebar/profile.svg" alt="profile icon">
+                <img src="./imgs/sidebar/profile.svg" alt="profile icon" class="icon">
                 <p>Profile</p>
             </li>
             <li>
-                <img src="./imgs/sidebar/messages.svg" alt="messages icon">
+                <img src="./imgs/sidebar/messages.svg" alt="messages icon" class="icon">
                 <p>Messages</p>
             </li>
             <li>
-                <img src="./imgs/sidebar/history.svg" alt="history icon">
+                <img src="./imgs/sidebar/history.svg" alt="history icon" class="icon">
                 <p>History</p>
             </li>
             <li>
-                <img src="./imgs/sidebar/tasks.svg" alt="tasks icon">
+                <img src="./imgs/sidebar/tasks.svg" alt="tasks icon" class="icon">
                 <p>Tasks</p>
             </li>
             <li>
-                <img src="./imgs/sidebar/communities.svg" alt="tasks icon">
+                <img src="./imgs/sidebar/communities.svg" alt="tasks icon" class="icon">
                 <p>Communities</p>
             </li>
         </ul>
         <ul class="s-btm">
             <li>
-                <img src="./imgs/sidebar/settings.svg" alt="settings icon">
+                <img src="./imgs/sidebar/settings.svg" alt="settings icon" class="icon">
                 <p>Settings</p>
             </li>
             <li>
-                <img src="./imgs/sidebar/support.svg" alt="support icon">
+                <img src="./imgs/sidebar/support.svg" alt="support icon" class="icon">
                 <p>Support</p>
             </li>
             <li>
-                <img src="./imgs/sidebar/privacy.svg" alt="privacy icon">
+                <img src="./imgs/sidebar/privacy.svg" alt="privacy icon" class="icon">
                 <p>Privacy</p>
             </li>
         </ul>
     </div>
-
-    <div class="main"></div>
-    
+    <div class="main">
+        <div class="projects">
+            <h4>Your Projects</h4>
+            <div class="card">
+                <div class="side-color"></div>
+                <div class="text-block">
+                    <h5 class="project-name">Smart Budget Tracker</h5>
+                    <p>A web app that helps users manage their finances by categorizing expenses, tracking income, and setting savings goals. Users can visualize spending patterns with interactive charts. The app also sends alerts when budgets are exceeded.</p>
+                </div>
+                <div class="action-block">
+                    <img src="./imgs/main/favorite.svg" alt="favorite-icon" class="action-img icon">
+                    <img src="./imgs/main/details.svg" alt="details-icon" class="action-img icon">
+                    <img src="./imgs/main/share.svg" alt="share-icon" class="action-img icon">
+                </div>
+            </div>
+            <div class="card">
+                <div class="side-color"></div>
+                <div class="text-block">
+                    <h5 class="project-name">AI-Powered Resume Analyzer</h5>
+                    <p>An AI tool that scans resumes and provides instant feedback based on job descriptions. It highlights strengths, suggests improvements, and checks for ATS (Applicant Tracking System) compatibility. Users receive personalized optimization tips to boost their chances of landing interviews.</p>
+                </div>
+                <div class="action-block">
+                    <img src="./imgs/main/favorite.svg" alt="favorite-icon" class="action-img icon">
+                    <img src="./imgs/main/details.svg" alt="details-icon" class="action-img icon">
+                    <img src="./imgs/main/share.svg" alt="share-icon" class="action-img icon">
+                </div>
+            </div>
+            <div class="card">
+                <div class="side-color"></div>
+                <div class="text-block">
+                    <h5 class="project-name">Fitness Progress Dashboard</h5>
+                    <p>A fitness tracking app that allows users to log workouts, monitor progress, and set fitness goals. It provides data visualizations for weight trends, workout consistency, and calorie burn. Users can also sync data from wearable fitness devices.</p>
+                </div>
+                <div class="action-block">
+                    <img src="./imgs/main/favorite.svg" alt="favorite-icon" class="action-img icon">
+                    <img src="./imgs/main/details.svg" alt="details-icon" class="action-img icon">
+                    <img src="./imgs/main/share.svg" alt="share-icon" class="action-img icon">
+                </div>
+            </div>
+            <div class="card">
+                <div class="side-color"></div>
+                <div class="text-block">
+                    <h5 class="project-name">Crowdsourced Travel Planner</h5>
+                    <p>A web-based platform where travelers can share itineraries, recommend hidden gems, and upvote the best travel plans. Users can customize trips based on budget, interests, and duration. The app integrates maps and real-time weather updates for seamless planning.</p>
+                </div>
+                <div class="action-block">
+                    <img src="./imgs/main/favorite.svg" alt="favorite-icon" class="action-img icon">
+                    <img src="./imgs/main/details.svg" alt="details-icon" class="action-img icon">
+                    <img src="./imgs/main/share.svg" alt="share-icon" class="action-img icon">
+                </div>
+            </div>
+            <div class="card">
+                <div class="side-color"></div>
+                <div class="text-block">
+                    <h5 class="project-name">Code Collaboration Hub</h5>
+                    <p>A platform for developers to share, review, and improve code collaboratively. It includes version control integration, live commenting, and AI-powered bug detection. Users can create public or private repositories for team projects.</p>
+                </div>
+                <div class="action-block">
+                    <img src="./imgs/main/favorite.svg" alt="favorite-icon" class="action-img icon">
+                    <img src="./imgs/main/details.svg" alt="details-icon" class="action-img icon">
+                    <img src="./imgs/main/share.svg" alt="share-icon" class="action-img icon">
+                </div>
+            </div>
+            <div class="card">
+                <div class="side-color"></div>
+                <div class="text-block">
+                    <h5 class="project-name">Smart Home Energy Optimizer</h5>
+                    <p>An IoT-based system that analyzes household energy consumption and suggests ways to reduce electricity costs. It provides real-time data on power usage for each appliance and sends efficiency tips. The app integrates with smart plugs to automate energy-saving routines.</p>
+                </div>
+                <div class="action-block">
+                    <img src="./imgs/main/favorite.svg" alt="favorite-icon" class="action-img icon">
+                    <img src="./imgs/main/details.svg" alt="details-icon" class="action-img icon">
+                    <img src="./imgs/main/share.svg" alt="share-icon" class="action-img icon">
+                </div>
+            </div>
+        </div>
+        <div class="announ-trend">
+            <div class="announcements">
+                <h4 class="top-announ">Announcements</h4>
+                <div class="a-container">
+                    <div class="announ">
+                        <h6 class="h-announ">Site Maintenance</h6>
+                        <p class="p-announ">Our website will undergo maintenance on 9/2/5202 from 8:23 AM to 3:28 PM ...</p>
+                    </div>
+                    <div class="announ-border"></div>
+                    <div class="announ">
+                        <h6 class="h-announ">Community Share Day</h6>
+                        <p class="p-announ">Park Cleanup at Jackson Park: Join us for a community-wide cleanup to help our...</p>
+                    </div>
+                    <div class="announ-border"></div>
+                    <div class="announ">
+                        <h6 class="h-announ">Updated Privacy Policy</h6>
+                        <p class="p-announ">We've updated our Privacy Policy to better protect your personal data and ...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="trending">
+                <h4 class="btm-trend">Trending</h4>
+                <div class="trending-content">
+                    <div class="trend">
+                        <img src="./imgs/main/trending/momo.png" alt="momo profile" class="trend-img">
+                        <p>
+                            <span class="trend-tag">@momo</span>
+                            <br>
+                            <span class="trend-text">Avatar Momo</span>
+                        </p>
+                    </div>
+                    <div class="trend">
+                        <img src="./imgs/main/trending/appa.png" alt="appa profile" class="trend-img">
+                        <p>
+                            <span class="trend-tag">@appa</span>
+                            <br>
+                            <span class="trend-text">Avatar Appa</span>
+                        </p>
+                    </div>
+                    <div class="trend">
+                        <img src="./imgs/main/trending/zuko.png" alt="zuko profile" class="trend-img">
+                        <p>
+                            <span class="trend-tag">@zuko</span>
+                            <br>
+                            <span class="trend-text">Fire Nation Zuko</span>
+                        </p>
+                    </div>
+                    <div class="trend">
+                        <img src="./imgs/main/trending/korra.png" alt="korra icon" class="trend-img">
+                        <p><span class="trend-tag">@korra</span>
+                            <br>
+                            <span class="trend-text">Avatar Korra</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
 </body>
 </html>
